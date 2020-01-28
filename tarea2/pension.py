@@ -22,3 +22,21 @@ import datetime
 # Parametros: nacimiento : datetime (datetime.date(year,month,day))
 
 def CalcularEdad(nacimiento):
+    hoy = datetime.date.today()
+
+    # CASO 1: edad mayor de 140 anos
+    if (hoy.year - nacimiento.year)  > 140:
+        print('La Fecha proporcionada supera los 140 anos de edad, Por favor verifique e ingrese nuevamente')
+        return False
+    else:
+        ano = nacimiento.year
+        mes = nacimiento.month
+        dia = nacimiento.day
+        fecha = nacimiento
+        edad = 0
+        while fecha < hoy:
+            edad += 1
+            fecha = datetime.date(ano+edad, mes, dia)
+
+        print('Mi edad es: %s' % (edad-1))
+        return True
