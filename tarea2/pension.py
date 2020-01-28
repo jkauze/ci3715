@@ -1,7 +1,7 @@
 # PENSION JK & D10S
 
-# Función que devuelva como resultado si una persona cumple con
-# los requisitos legales para recibir una pensión de vejez del
+# Funcion que devuelva como resultado si una persona cumple con
+# los requisitos legales para recibir una pension de vejez del
 # Instituto Venezolano de los Seguros Sociales (IVSS).
 
 # AUTORES:
@@ -41,7 +41,7 @@ def CalcularEdad(nacimiento):
         # print('Mi edad es: %s' % (edad-1))
         return True
 
-# Función que devuelva como resultado si una persona puede recibir pensión o no
+# Funcion que devuelva como resultado si una persona puede recibir pension o no
 # Parametros: sexo : string (h/m), edad : int, semanas : int, salubridad : int
 def pensionado(sexo,edad,semanas,salubridad):
     limitehombre = 60
