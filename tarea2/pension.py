@@ -28,9 +28,11 @@ def CalcularEdad(nacimiento):
     if (hoy.year - nacimiento.year)  > 140:
         print('La Fecha proporcionada supera los 140 anos de edad, Por favor verifique e ingrese nuevamente')
         return False
+    #CASO 2: fecha futura
     elif hoy < nacimiento:
         print('Fecha de nacimiento Invalida')
         return False
+    #CASO 3: Calcular edad correcta
     else:
         ano = nacimiento.year
         mes = nacimiento.month
@@ -41,5 +43,5 @@ def CalcularEdad(nacimiento):
             edad += 1
             fecha = datetime.date(ano+edad, mes, dia)
 
-        print('Mi edad es: %s' % (edad-1))
+        # print('Mi edad es: %s' % (edad-1))
         return True
