@@ -16,9 +16,9 @@ class testing(unittest.TestCase):
     def test1(self):
         self.assertEqual(CalcularEdad(datetime.date(1794,12,13)), False)
 
-    # CASO 2: fecha invalida
+    # CASO 2: fecha futura
     def test2(self):
-        self.assertEqual(CalcularEdad(datetime.date(3000,122,13)), False)
+        self.assertEqual(CalcularEdad(datetime.date(3000,12,13)), False)
 
     # CASO 3: La fecha es correcta
     def test3(self):
